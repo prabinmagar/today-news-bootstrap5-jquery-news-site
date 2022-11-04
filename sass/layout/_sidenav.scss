@@ -1,0 +1,94 @@
+.sc-side-navbar{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 28px;
+    background-color: $clr-primary;
+    transform: translateX(100%);
+    @include transition-ease;
+
+    @include breakpoint-up(sm){
+        width: 320px;
+    }
+
+    .close-btn{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: $clr-white;
+        @include transition-ease;
+
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+
+    .side-nav-list{
+        overflow-y: scroll;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+
+            &-track{
+                border-radius: 8px;
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+            &-thumb{
+                background-color: $clr-blue;
+                border-radius: 8px;
+            }
+        }
+    }
+    .side-nav-item{
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.09);
+        .side-nav-link{
+            display: block;
+            padding: 10px 0;
+            font-weight: 600;
+            font-size: 20px;
+            color: $clr-white;
+            @include transition-ease;
+
+            @include breakpoint-down(xs){
+                font-size: 16px;
+            }
+
+            &:hover{
+                color: rgba(255, 255, 255, 0.8);
+                padding-left: 20px;
+            }
+        }
+    }
+    .side-nav-item-logo{
+        border-bottom: 3px solid $clr-white;
+        margin: 12px 0;
+        img{
+            width: 120px;
+        }
+    }
+}
+
+.navbar-overlay-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include size(100%, 100%);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-ease;
+    background-color: black(0.4);
+}
+
+// js related classes
+.js-show-navbar{
+    transform: translateX(0);
+}
+.js-show-navbar-modal{
+    opacity: 1;
+    visibility: visible;
+}

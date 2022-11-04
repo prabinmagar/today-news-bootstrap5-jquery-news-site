@@ -1,0 +1,83 @@
+.footer{
+    .footer-content{
+        .ftr-top{
+            border-top: 1px solid #00658C33;
+            border-bottom: 1px solid #00658C33;
+            padding: 27px 0;
+            .ftr-social-links{
+                margin-left: 1rem!important;
+                li {
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 4px;
+                    a{
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include transition-ease;
+
+                        &:hover{
+                            color: $clr-secondary;
+                        }
+                    }
+                }
+            }
+            .btn{
+                width: 100%;
+
+                @include breakpoint-up(sm){
+                    width: auto;
+                }
+            }
+        }
+
+        .ftr-middle{
+            padding: 32px 0 24px 0;
+            .ftr-nav-links{
+                li{
+                    padding-right: 0;
+                    padding-left: 0;
+                    margin-bottom: 8px;
+                    a{
+                        color: black(0.5);
+                    }
+                }
+            }
+
+            .row{
+                .col-r{
+                    .ftr-block-list{
+                        li{
+                            margin-bottom: 12px;
+                            > *{
+                                &:first-child{
+                                    width: 50%;
+                                }
+                                &:last-child{
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ftr-bottom{
+            padding: 30px 0 20px 0;
+            background: rgba(200, 35, 42, 0.02);
+
+            .ftr-site-logo{
+                img{
+                    max-width: 80px;
+                }
+            }
+        }
+    }
+}

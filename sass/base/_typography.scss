@@ -1,0 +1,31 @@
+
+body{
+    font-family: $font-base;
+    font-size: $font-base-size;
+    font-weight: $font-base-weight;
+}
+
+.fnt-sarala{font-family: $font-sarala;}
+.fnt-mukta{font-family: $font-base;}
+
+h1, h2, h3, h4, h5, h6{
+    line-height: 1.45;
+}
+p{
+    @include breakpoint-down(sm){
+        font-size: 18px!important;
+    }
+    @include breakpoint-down(xs){
+        font-size: 16px!important;
+    }
+}
+h4, h5, h6{
+    @include breakpoint-down(xs){
+        font-size: 17px!important;
+    }
+}
+h1, h2, h3{
+    @include breakpoint-down(xs){
+        font-size: 24px!important;
+    }
+}

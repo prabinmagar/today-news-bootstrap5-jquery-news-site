@@ -1,0 +1,145 @@
+
+// ham burger icon
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 18px;
+    @include transition-ease;
+
+    > div{
+        width: 24px;
+        height: 2.5px;
+        background-color: $clr-black;
+        @include transition-ease;
+    }
+
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+.icon-btn{
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 25px;
+    @include flex-center;
+}
+
+// icon link 
+.link-icon{
+    width: 31px;
+    height: 31px;
+    background-color: #dbebf2;
+    color: #E20A17;
+    @include flex-center;
+    border-radius: 50%;
+}
+
+// vid play button
+.vid-play-btn{
+    width: 70px;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 10px 50px;
+    border-radius: 50%;
+    @include transition-ease;
+    animation: scaleEffect ease-in-out infinite 2500ms;
+
+    @keyframes scaleEffect{
+        0%{transform: scale(1);}
+        50%{transform: scale(1.2);}
+        100%{transform: scale(1);}
+    }
+    
+}
+%btn-shared{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 2%;
+    height: 52px;
+    line-height: 54px;
+    padding: 2px 30px;
+    border: none;
+    border-radius: 2px!important;
+    @include transition-ease;
+}
+
+.btn-gray77{
+    @extend %btn-shared;
+    background: rgba(196, 196, 196, 0.25);
+    color: $clr-primary;
+
+    &:hover{
+        background-color: $clr-primary;
+        color: $clr-white;
+    }
+}
+
+.btn-primary{
+    @extend %btn-shared;
+    background: $clr-primary;
+    color: $clr-white;
+
+    &:hover{
+        background-color: rgba(196, 196, 196, 0.25);
+        color: $clr-primary;
+    }
+}
+
+// form button
+.form-btn{
+    border: 1px solid #726C6C;
+    background-color: $clr-primary;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2%;
+    color: $clr-white;
+    display: block;
+
+    &:hover{
+        color: $clr-primary;
+        border-color: $clr-primary;
+    }
+}
+
+.share-links{
+    .share-links-item{
+        &:nth-child(1){
+            .share-link{
+                background-color: $clr-facebook-icon;
+            }
+        }
+        &:nth-child(2){
+            .share-link{
+                background-color: $clr-twitter-icon;
+            }
+        }
+        &:nth-child(3){
+            .share-link{
+                background-color: $clr-messenger-icon;
+            }
+        }
+        &:nth-child(4){
+            .share-link{
+                background-color: $clr-whatsapp-icon;
+            }
+        }
+    }
+    .share-link{
+        width: 38px;
+        height: 38px;
+        margin-right: 16px;
+        font-size: 16px;
+        color: $clr-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
